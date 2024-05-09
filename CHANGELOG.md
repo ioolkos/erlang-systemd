@@ -2,70 +2,34 @@
 ## [Unreleased]
 
 ### Bug Fixes
+- add enough to list of required applications
 - typespecs for watchdog/1
 - fix dialyzer error for systemd:set_status/1
+- docs for `systemd_journal_h`
+- Add Erlang 24 support ([#29](https://github.com/hauleth/erlang-systemd/issues/29))
+- do not fail on invalid JOURNAL_STREAM content
+- **journal:** use correct name for priority attribute
+- **journal:** format message as Unicode-encoded binary
+- **journal:** cleanup journal documentation
+- **journal_h:** use proper check for socket existence
 - **journal_h:** Dialyzer error
+- **kmsg_formatter:** do not append log level on last newline
+- **systemd_journal_h:** Support literal field values ([#25](https://github.com/hauleth/erlang-systemd/issues/25))
+- **systemd_protocol:** keep empty values in encode_field/2 ([#27](https://github.com/hauleth/erlang-systemd/issues/27))
 
 ### Documentation
 - correct the in-doc description of return value for watchdog/1
 - fix typos
+- add syntax highlighting on systemd example
+- describe usage in Elixir projects
+- fix typo equested -> requested
+- imporve systemd.service example in the README
+- **fds:** document new functions
 
 ### Features
 - add warning log message if there is no readiness message sent
 - send MAINPID message on socket start
-
-
-<a name="v0.6.2"></a>
-## [v0.6.2] - 2021-12-30
-### Bug Fixes
-- docs for `systemd_journal_h` ([`9979ba5`](https://github.com/hauleth/erlang-systemd/commit/9979ba53c8a0c8d02294cbfb5bf4ba3be4ab4da0))
-
-### Documentation
-- add syntax highlighting on systemd example ([`a580cab`](https://github.com/hauleth/erlang-systemd/commit/a580cab9808d0aa8b1ad10fa18409af3c940f1a5))
-
-### Features
-- add functions to set custom status ([`9342d36`](https://github.com/hauleth/erlang-systemd/commit/9342d3654981044a3fcbf67fef7fc41cd855b946))
-
-
-<a name="v0.6.1"></a>
-## [v0.6.1] - 2021-05-21
-### Bug Fixes
-- Add Erlang 24 support ([#29](https://github.com/hauleth/erlang-systemd/issues/29)) ([`2588664`](https://github.com/hauleth/erlang-systemd/commit/2588664af2633ff7b8c3b829eee0bcfc4c324407))
-- do not fail on invalid JOURNAL_STREAM content ([`0ce748e`](https://github.com/hauleth/erlang-systemd/commit/0ce748edffcb72bb028733e9ca4707cb30add853))
-- add enough to list of required applications ([`937ef70`](https://github.com/hauleth/erlang-systemd/commit/937ef703b4145ee3ad9279018129a9c3a93a9dda))
-- **systemd_journal_h:** Support literal field values ([#25](https://github.com/hauleth/erlang-systemd/issues/25)) ([`7a1b9a7`](https://github.com/hauleth/erlang-systemd/commit/7a1b9a7fb2b3e3ec682f9ee9797f9817172a7050))
-- **systemd_protocol:** keep empty values in encode_field/2 ([#27](https://github.com/hauleth/erlang-systemd/issues/27)) ([`e732727`](https://github.com/hauleth/erlang-systemd/commit/e732727b0b637eb29e8adc77a4eb46d7ebc0f41a))
-
-
-<a name="0.6.0"></a>
-## [0.6.0] - 2021-03-12
-### Bug Fixes
-- **journal_h:** use proper check for socket existence ([`20b048e`](https://github.com/hauleth/erlang-systemd/commit/20b048e14c21f74091091cd83c4386b9afeabc2f))
-- **kmsg_formatter:** do not append log level on last newline ([`4e52c0f`](https://github.com/hauleth/erlang-systemd/commit/4e52c0f89a08e06b225e40ab9d0ee6f8f605b380))
-
-
-<a name="0.5.3"></a>
-## [0.5.3] - 2021-01-04
-### Bug Fixes
-- **journal:** use correct name for priority attribute ([`9493d35`](https://github.com/hauleth/erlang-systemd/commit/9493d35f8c99645472836b3e13e5e30372ee3350))
-
-
-<a name="0.5.2"></a>
-## [0.5.2] - 2021-01-04
-### Bug Fixes
-- **journal:** format message as Unicode-encoded binary ([`1614c7c`](https://github.com/hauleth/erlang-systemd/commit/1614c7cedc592ecbf375149a1e0de6bfd180301c))
-
-
-<a name="0.5.1"></a>
-## [0.5.1] - 2021-01-04
-### Bug Fixes
-- **journal:** cleanup journal documentation ([`3b6bf5a`](https://github.com/hauleth/erlang-systemd/commit/3b6bf5aafe4bf3e364be4bb54654dcf2c96c9163))
-
-### Documentation
-- describe usage in Elixir projects ([`ff67d80`](https://github.com/hauleth/erlang-systemd/commit/ff67d808114e6aaeb6a338357c3b5ca7986040ca))
-- fix typo equested -> requested ([`5949441`](https://github.com/hauleth/erlang-systemd/commit/5949441e63fba06c6f8c01c8951ffe81dfd354fe))
-- imporve systemd.service example in the README ([`cd1b697`](https://github.com/hauleth/erlang-systemd/commit/cd1b697c8d4326fcec50cf8b85ab57e5d221bd63))
-- **fds:** document new functions ([`0e782a6`](https://github.com/hauleth/erlang-systemd/commit/0e782a6635b104b52c49c4027733bf9e5b9b65e1))
+- add functions to set custom status
 
 
 <a name="0.5.0"></a>
@@ -151,13 +115,7 @@
 <a name="0.1.0"></a>
 ## 0.1.0 - 2020-01-15
 
-[Unreleased]: https://github.com/hauleth/erlang-systemd/compare/v0.6.2...HEAD
-[v0.6.2]: https://github.com/hauleth/erlang-systemd/compare/v0.6.1...v0.6.2
-[v0.6.1]: https://github.com/hauleth/erlang-systemd/compare/0.6.0...v0.6.1
-[0.6.0]: https://github.com/hauleth/erlang-systemd/compare/0.5.3...0.6.0
-[0.5.3]: https://github.com/hauleth/erlang-systemd/compare/0.5.2...0.5.3
-[0.5.2]: https://github.com/hauleth/erlang-systemd/compare/0.5.1...0.5.2
-[0.5.1]: https://github.com/hauleth/erlang-systemd/compare/0.5.0...0.5.1
+[Unreleased]: https://github.com/hauleth/erlang-systemd/compare/0.5.0...HEAD
 [0.5.0]: https://github.com/hauleth/erlang-systemd/compare/0.4.0...0.5.0
 [0.4.0]: https://github.com/hauleth/erlang-systemd/compare/0.3.3...0.4.0
 [0.3.3]: https://github.com/hauleth/erlang-systemd/compare/0.3.2...0.3.3
